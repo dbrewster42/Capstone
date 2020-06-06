@@ -1,0 +1,14 @@
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+.covers {
+  width: 90%;
+  height: 66%;
+}
+.squares {
+  width: 30%;
+  /* margin: 2%; */
+  height: 550px;
+}

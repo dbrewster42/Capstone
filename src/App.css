@@ -1,12 +1,30 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 }
-
+.heads {
+  /* width: 800px; */
+  height: 100%;
+  width: 500px;
+  align-self: fill;
+}
+.imgs {
+  position: relative;
+}
+.title {
+  position: absolute;
+  /* width: 100%; */
+  /* justify-content: center; */
+  padding: 5px;
+  color: white;
+  background-color: black;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
