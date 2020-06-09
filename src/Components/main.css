@@ -7,8 +7,65 @@
   width: 90%;
   height: 66%;
 }
+
 .squares {
-  width: 30%;
+  width: 24%;
   /* margin: 2%; */
   height: 550px;
+}
+
+.icon {
+  height: 30px;
+}
+.checkCover {
+  width: 200px;
+}
+#searchBox {
+  width: 20%;
+  position: relative;
+  border: solid black 1px;
+  background-color: whitesmoke;
+  height: 500px;
+}
+#red {
+  height: 30px;
+  width: 30px;
+  background-color: red;
+  border-radius: 30px;
+  color: white;
+}
+.c {
+  margin-bottom: 20px;
+}
+.filters {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  width: 80px;
+}
+
+#ad {
+  width: 65%;
+  margin-top: 15px;
+}
+@media screen and (max-width: 950px){
+  .squares {
+    width: 33%;
+    height: 400px;
+  }
+  #searchBox {
+    width: 28%;
+    height: 385px;
+  }
+  input {
+    width: 75%;
+  }
+  #ad {
+    height: 30px;
+    width: 30%;
+  }
+  .covers {
+    width: 75%;
+    height: 60%;
+  }
 }

@@ -1,23 +1,25 @@
 [
   {
     "isbn": "9781593275846",
-    "title": "Harry Potter and the Methods of Rationality",
+    "title": "HP and the Methods of Rationality",
     "author": "Eliezer Yudkowsky",
     "publisher": "No Starch Press",
-    "category": "Fan Fiction",
+    "category": "Fantasy",
     "price": 19.99,
     "picture": "mor.jpg",
-    "inventory": 10
+    "inventory": 10,
+    "quantity": 0
   },
   {
-    "isbn": "9781449331842",
+    "isbn": "9781449334242",
     "title": "Hitchhikers Guide to the Galaxy",
     "author": "Douglas Adams",
     "publisher": "Galatic Encyclopedia",
     "category": "Sci-Fi",
     "price": 14.99,
     "picture": "hgg.jpg",
-    "inventory": 10
+    "inventory": 10,
+    "quantity": 0
   },
   {
     "isbn": "9781593295846",
@@ -27,27 +29,41 @@
     "category": "Sci-Fi",
     "price": 12.99,
     "picture": "mm.jpg",
-    "inventory": 10
+    "inventory": 10,
+    "quantity": 0
   },
   {
     "isbn": "9781449331848",
     "title": "Game of Thrones",
     "author": "George RR Martin",
     "publisher": "Winterfell",
-    "category": "Medieval Fantasy",
+    "category": "Fantasy",
     "price": 9.99,
     "picture": "got.jpg",
-    "inventory": 10
+    "inventory": 10,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781449339948",
+    "title": "Foundation",
+    "author": "Isaac Asimov",
+    "publisher": "Galatic Library",
+    "category": "Sci-Fi",
+    "price": 11.99,
+    "picture": "foundation.jpg",
+    "inventory": 10,
+    "quantity": 0
   },
   {
     "isbn": "9781593275846",
     "title": "Catch-22",
     "author": "Joseph Heller",
     "publisher": "Penguins",
-    "category": "Comedy",
+    "category": "Classic",
     "price": 12.99,
     "picture": "22.jpg",
-    "inventory": 10
+    "inventory": 10,
+    "quantity": 0
   },
   {
     "isbn": "9781449331810",
@@ -57,7 +73,8 @@
     "category": "Sci-Fi",
     "price": 11.99,
     "picture": "dune.jpeg",
-    "inventory": 5
+    "inventory": 5,
+    "quantity": 0
   },
   {
     "isbn": "9781593275846",
@@ -67,7 +84,19 @@
     "category": "Classic",
     "price": 9.99,
     "picture": "catcher.jpg",
-    "inventory": 10
+    "inventory": 10,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781593271234",
+    "title": "Harry Potter and the Half Blood Prince",
+    "author": "JK Rowling",
+    "publisher": "No Starch Press",
+    "category": "Fantasy",
+    "price": 9.99,
+    "picture": "hp.jpg",
+    "inventory": 5,
+    "quantity": 0
   },
   {
     "isbn": "9781449331228",
@@ -77,7 +106,8 @@
     "category": "Horror",
     "price": 7.99,
     "picture": "gb.jpg",
-    "inventory": 10
+    "inventory": 10,
+    "quantity": 0
   },
   {
     "isbn": "9781449331899",
@@ -87,7 +117,8 @@
     "category": "Classic",
     "price": 6.99,
     "picture": "images.jpg",
-    "inventory": 5
+    "inventory": 5,
+    "quantity": 0
   },
   {
     "isbn": "9781449331844",
@@ -97,6 +128,7 @@
     "category": "Classic",
     "price": 4.99,
     "picture": "1984.jpg",
-    "inventory": 1
+    "inventory": 1,
+    "quantity": 0
   }
 ]
