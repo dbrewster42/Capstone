@@ -1,16 +1,16 @@
 #cover {
     width: 350px;
     display: inline-block;
-    margin-left: 200px;
+    margin-left: 100px;
   }
   #info {
     display: inline-block;
     width: 550px;
   }
-  .link {
+  /* .link {
     justify-content: flex-end;
     align-self: flex-end;
-  }
+  } */
   #single {
      display: flex;
      margin-top: 15px;

@@ -24,8 +24,10 @@
   width: 20%;
   position: relative;
   border: solid black 1px;
-  background-color: whitesmoke;
+  background-color: lightgrey;
   height: 500px;
+  margin-right: 3%;
+  margin-left: 1%;
 }
 #red {
   height: 30px;
