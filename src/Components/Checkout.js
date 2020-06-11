@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import data from "../data/books.json";
+// import data from "../data/books.json";
 import { Link } from "react-router-dom";
 // import { Alert } from 'react-alert'
 
 // const value = useContext(Order);
 const Checkout = (props) => {
-    let [total, setTotal] = useState(0);
+    let [total] = useState(0);
     let [order, setOrder] = useState(props.order);
     //     const getTotal = order => {
     //         order.map(item, => {
@@ -27,6 +27,7 @@ const Checkout = (props) => {
         alert("Your purchase is completed");
         console.log(e);
         setOrder([]);
+        // window.location.href = "/";
     }
 
     const removeBook = e => {
@@ -48,7 +49,7 @@ const Checkout = (props) => {
                             </p>
                             <p>Quantity: {item.quantity}</p>
                             <p>
-                                Price: <strong>${item.price * item.quantity}</strong>
+                                Price: <strong>${Math.round(100 * item.price * item.quantity) / 100}</strong>
                             </p>
                             <button onClick={removeBook} value={i}>Remove From Cart</button>
                         </div>);
@@ -63,7 +64,7 @@ const Checkout = (props) => {
                 {/* <h2>Order total: {(total + 2.99) * 1.0825}$</h2> */}
             </div>
             <div id="form">
-                <Link to={`/`} className="link">Back</Link><br />
+                <h3><Link to={`/`} className="link">Back</Link></h3>
                 <h3 id="green">Complete Purchase</h3>
                 <form onSubmit={submitPurchase}>
                     <input type="text" placeholder="Full Name" /><br />

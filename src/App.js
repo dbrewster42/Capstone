@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import data from "./data/books.json";
 import Main from "./Components/Main";
@@ -6,8 +6,7 @@ import Header from "./Components/Header";
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Redirect
+  Switch
 } from "react-router-dom";
 import Single from "./Components/Single";
 // import Search from "./Components/Search";
@@ -22,31 +21,33 @@ function App() {
   let [book] = useState({})
   const submitOrder = (e) => {
     e.preventDefault();
-    // if (e.target.value > e.target.value){
-    //   alert("We do not have that many copies in inventory")
-    //   setQuantity(1)
-    //   }else {
     // console.log(e.target);
-    // console.log(e.target.quantity.value, e.target.obj.value);  
-    // const id = e.target.obj.value;
+    // console.log(e.target.quantity.value, e.target.obj.value);        
     const id = e.target.obj.value
     // console.log(data[id]);
     book = data[id];
     book.quantity = parseInt(e.target.quantity.value);
-    console.log(book);
-    const newOrder = order;
-    newOrder.push(book);
-    // setNewBook(book);
-    // console.log(newBook);
-    setOrder(newOrder);
-    console.log(order);
-    const updatedItem = { ...book, inventory: book.inventory - e.target.quantity.value }
-    console.log(updatedItem)
-    const itemCopy = [...data]
-    itemCopy.splice(id, 1, updatedItem)
-    console.log(itemCopy)
-    alert("Item Added!");
-    // location.href = "/"   
+    console.log(book.quantity, "1", book.inventory)
+    if (book.quantity > book.inventory) {
+      alert("We do not have that many copies in inventory")
+    }
+    else {
+
+      console.log(book);
+      const newOrder = order;
+      newOrder.push(book);
+      // setNewBook(book);
+      // console.log(newBook);
+      setOrder(newOrder);
+      console.log(order);
+      const updatedItem = { ...book, inventory: book.inventory - e.target.quantity.value }
+      console.log(updatedItem)
+      const itemCopy = [...data]
+      itemCopy.splice(id, 1, updatedItem)
+      console.log(itemCopy)
+      alert("Item Added!");
+      setNewData(itemCopy);
+    }
   };
   // useEffect(() => {
   //   setOrder(order)
@@ -71,7 +72,7 @@ function App() {
 
           <Route
             exact path="/:i"
-            render={() => <Single submitOrder={submitOrder} order={order} />}
+            render={() => <Single submitOrder={submitOrder} order={order} data={newData} />}
           />;
 
 

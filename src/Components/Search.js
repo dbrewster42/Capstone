@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import cart from "../images/cart.png"
 // import data from "../data/books.json";
 import ad from "../images/AD.jpg"
+import "./main.css"
 
 const Search = (props) => {
     const [item, setItem] = useState("");
@@ -52,10 +53,13 @@ const Search = (props) => {
     // );
     return (
         <div id="searchBox">
+            <Link to='/'>Home</Link><br />
             <Link to='/checkout'>Shopping Cart</Link><br />
             <button id="red">{length}</button><br></br>
             <img src={cart} alt="shopping cart icon" className="icon c" />
-            {order.map(item => <p>{item.title}</p>)}<br></br>
+            <ul id="tiny">
+                {order.map(item => <li>{item.title}</li>)}<br></br>
+            </ul>
             Search For Books By...
             {/* <form onSubmit={props.submitSearch}> */}
             <form onSubmit={props.bookFilter}>
@@ -84,15 +88,16 @@ const Search = (props) => {
                 <button className="filters">Genre</button>
                 {/* <button className="filters" onClick={props.bookFilter}>Genre</button> */}
                 <select name="genre" value={genre} onChange={changeGenre}>
-                    <option value="scifi">Sci-Fi</option>
-                    <option value="fantasy">Fantasy</option>
-                    <option value="classic">Classic</option>
-                    <option value="horror">Horror</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Classic">Classic</option>
+                    <option value="Horror">Horror</option>
                 </select>
             </form>
+            <button id="reset" onClick={props.reset}>Reset Search</button><br></br>
             {/* {order.map(item => <p>{JSON.stringify(item)}</p>)} */}
             {order.length < 1 &&
-                <img src={ad} id="ad" alt="ad"></img>}
+                <img src={ad} id="ad" alt="advertisement"></img>}
         </div >
     );
 };

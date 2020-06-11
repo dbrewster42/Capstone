@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import data from "../data/books.json";
+// import data from "../data/books.json";
 import {
   BrowserRouter as Router,
   Link,
@@ -22,6 +22,7 @@ const Single = (props) => {
   const images = importAll(require.context("../images", false, /\.(jpe?g)$/));
   let id = useParams();
   let params = id.i;
+  let data = props.data
   let book = data[params];
   console.log(book);
   let order = props.order;
@@ -85,12 +86,9 @@ const Single = (props) => {
           <input type="submit" value="Add to Cart" id="purch" />
         </form>
       </div>
-      <div>
-        <Link to={`/`} className="link">Back</Link><br />
-        <img src={images[book.picture]} id="cover" alt="cover" />
-      </div>
-
-
+      {/* <div>
+        <Link to={`/`} className="link">Back</Link><br /> */}
+      <img src={images[book.picture]} id="cover" alt="cover" />
     </div >
   );
 }

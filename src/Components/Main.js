@@ -43,23 +43,36 @@ const Main = (props) => {
   const authFilter = e => {
     e.preventDefault();
     console.log(e.target);
-    console.log(e.target.item.value);
-    const input = e.target.item.value;
-    // setItem("");
-
-    titleDisplay(input);
+    console.log(e.target.auth.value);
+    const input = e.target.auth.value;
+    authDisplay(input);
   }
   const genreFilter = e => {
     e.preventDefault();
     console.log(e.target);
-    console.log(e.target.item.value);
-    const input = e.target.item.value;
-    const title = e.target.submit.value;
-    // setItem("");
-
-    titleDisplay(input);
+    console.log(e.target.genre.value);
+    const input = e.target.genre.value;
+    genreDisplay(input);
   }
-
+  const genreDisplay = input => {
+    data.filter((p => {
+      console.log(p.category)
+      if ((p.category).includes(input)) {
+        newData.push(p)
+      }
+      console.log(newData)
+      setData(newData);
+    }))
+  };
+  const authDisplay = input => {
+    data.filter((p => {
+      if ((p.author).includes(input)) {
+        newData.push(p)
+      }
+      console.log(newData)
+      setData(newData);
+    }))
+  };
   const titleDisplay = input => {
     data.filter((p => {
       // console.log("1", p.title, "2", input);
@@ -74,16 +87,15 @@ const Main = (props) => {
       setData(newData);
     }))
   };
-  // useEffect(() => {
-  //   data.filter((p =>
-  //     Object.values(p).includes(input))
-  //   }), [bookFilter]);
-  // submitSearch = e => {
-  //   input
-  // }
+  const reset = () => {
+    window.location.href = "/";
+  }
+  const customStyle = {
+    textDecoration: "line-through"
+  }
   return (
     <div id="main">
-      <Search bookFilter={bookFilter} authFilter={authFilter} genreFilter={genreFilter} order={order} />
+      <Search bookFilter={bookFilter} authFilter={authFilter} genreFilter={genreFilter} order={order} reset={reset} />
       {data.map((book, i) => {
         return (
           <div key={i} className="squares">
@@ -92,11 +104,11 @@ const Main = (props) => {
               className="covers"
               alt="book cover"
             />
-            {/* <h3 onClick={(props.linkClick}></h3> */}
-            {/* <h3 onClick={() => { return book }}> */}
-            <h3>
-              <Link to={`/${i}`}>{book.title}</Link>
-            </h3>
+            {book.inventory ?
+              <h3>  <Link to={`/${i}`}>{book.title}</Link>  </h3> :
+              <h3 style={customStyle}>
+                <Link to={`/${i}`}>{book.title}</Link>
+              </h3>}
             <p>
               Author: <em>{book.author}</em>
             </p>
