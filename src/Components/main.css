@@ -13,12 +13,12 @@
   font-size: 130%;
   margin: 0px 0px 10px 0px;
   animation-name: linkColor;
-  animation-duration: 7s;
+  animation-duration: 9s;
 }
 
 @keyframes linkColor {
-from {color: lightseagreen;}
-to {color: darkblue;}
+from {color: black;}
+to {color: brightblue;}
 }
 .sTop {
   width: 45%;

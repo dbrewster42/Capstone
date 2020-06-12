@@ -12,6 +12,8 @@ I need to find out whether the best way to navigate the site would be with toggl
 
 I also don't exactly understand what it means by 'Search Functionality By Product Name' //asked and answered in slack
 
+I am not familiar with react. I have a lot of learning to do, especially with passing and updating data but also in a myriad of other ways.
+
 2. Planning the Solution
 
 ---
@@ -40,6 +42,8 @@ Pretty easy sailing after that, created search bar, checkout page, and all other
 4. Reflection / Refactor
 
 ---
-I've refactored more times than I can count. Project now meets MVP requirements, will look to add on bonus' and stripe. If I can figure out what an employee view looks like then I can do that. 
+I've refactored more times than I can count. Project now meets MVP requirements, will look to add on bonuses like stripe. If I can figure out what an employee view looks like then I can do that. 
 
-I had a couple things I wanted to do that required a modulus operator inside the render and I guess I just have to scratch that
+I had a couple things I wanted to do that required a modulus operator (like the fixed search bar) inside the render and I guess I just have to scratch that
+
+I had an epiphany, the night before my  presentation, of how I could make my search box fixed even without the modulus operand. I spent an hour implementing the solution but it broke my search bar. I refactored my search function and fixed it... according to the console log but the information was not sticking for some reason and I didn't have the time to figure out the reason.

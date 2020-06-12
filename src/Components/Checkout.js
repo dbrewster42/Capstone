@@ -92,13 +92,13 @@ const Checkout = (props) => {
             <div id="form">
                 <h3><Link to={`/`} className="link">Home</Link></h3>
                 <h3 id="green">Complete Purchase</h3>
-                <form onSubmit={(submitPurchase)}>
+                <form onSubmit={submitPurchase}>
                     {/* <form> */}
                     <input type="text" placeholder="Full Name" /><br />
                     <input type="text" placeholder="Shipping Address" /><br />
                     <input type="text" placeholder="City, State, and Zip" /><br />
                     <input type="integer" placeholder="Credit Card Number" /><br />
-                    <input type="submit" value="Purchase" />
+                    <input type="submit" value="Purchase" id="buy" />
                     {/* <input type="submit" value="Purchase" onClick={() => { checkout(); }} /> */}
                 </form>
             </div>
