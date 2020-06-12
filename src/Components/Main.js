@@ -61,7 +61,7 @@ const Main = (props) => {
         newData.push(p)
       }
       console.log(newData)
-      setData(newData);
+      return setData(newData);
     }))
   };
   const authDisplay = input => {
@@ -70,7 +70,7 @@ const Main = (props) => {
         newData.push(p)
       }
       console.log(newData)
-      setData(newData);
+      return setData(newData);
     }))
   };
   const titleDisplay = input => {
@@ -84,7 +84,7 @@ const Main = (props) => {
         newData.push(p)
       }
       console.log(newData)
-      setData(newData);
+      return setData(newData);
     }))
   };
   const reset = () => {
@@ -116,11 +116,6 @@ const Main = (props) => {
               Price: <strong>{book.price}$</strong>
             </p>
             <p>{book.inventory} left in stock</p>
-            {/* {id == i} ?
-              (<p>{book.inventory - order[id].quantity} left in stock</p>)
-              :
-              (<p>{book.inventory} left in stock</p>) */}
-
           </div>
         );
       })}
@@ -131,11 +126,3 @@ const Main = (props) => {
 
 export default Main;
 
-//   import React from 'react';
-// <Link to="/about">About</Link>
-
-/* <Route exact path='/' render{props => (
-    <Fragment>
-        <Search />
-    </Fragment>
-)} */

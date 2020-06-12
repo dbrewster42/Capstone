@@ -7,7 +7,7 @@
     "category": "Fantasy",
     "price": 19.99,
     "picture": "mor.jpg",
-    "inventory": 10,
+    "inventory": 12,
     "quantity": 0
   },
   {
@@ -17,8 +17,19 @@
     "publisher": "Galatic Encyclopedia",
     "category": "Sci-Fi",
     "price": 14.99,
-    "picture": "hgg.jpg",
+    "picture": "hitch.jpeg",
     "inventory": 10,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781779334242",
+    "title": "Carnage and Culture",
+    "author": "Victor Davis Hanson",
+    "publisher": "Penguin",
+    "category": "Horror",
+    "price": 13.99,
+    "picture": "carnage.jpg",
+    "inventory": 8,
     "quantity": 0
   },
   {
@@ -96,6 +107,17 @@
     "price": 9.99,
     "picture": "hp.jpg",
     "inventory": 5,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781449339333",
+    "title": "I, Robot",
+    "author": "Isaac Asimov",
+    "publisher": "Galatic Library",
+    "category": "Sci-Fi",
+    "price": 9.99,
+    "picture": "robot.jpg",
+    "inventory": 7,
     "quantity": 0
   },
   {

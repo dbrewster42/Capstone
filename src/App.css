@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: lightslategray;
+  background-color: lightslategray; 
 }
 #header {
   width: 100%;
@@ -51,8 +51,14 @@
   font-weight: 900;
   vertical-align: top;
 }
-.link {
-  /* margin-left: 200px; */
-  color: white;
+.link {    
+  font-weight: 700;
+  color: blue;
   margin-top: 0px;
+}
+.rAll { 
+  width: 80px;
+  background-color: red;
+  border-radius: 10px;
+  color: white;
 }

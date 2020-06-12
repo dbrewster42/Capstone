@@ -12,6 +12,7 @@ import Single from "./Components/Single";
 // import Search from "./Components/Search";
 import Checkout from "./Components/Checkout";
 
+// const stripePromise = 'pk_test_JJ1eMdKN0Hp4UFJ6kWXWO4ix00jtXzq5XG';
 function App() {
   const [newData, setNewData] = useState(data)
   // console.log(data)
@@ -53,6 +54,9 @@ function App() {
   //   setOrder(order)
   //   // order.length = order.length;
   // }, [order]);
+  const purchasedOrder = (e) => {
+    setOrder([]);
+  }
   return (
     <Router>
       <div className="App">
@@ -67,7 +71,7 @@ function App() {
 
           <Route
             exact path="/checkout"
-            render={() => <Checkout order={order} />}
+            render={() => <Checkout order={order} purchasedOrder={purchasedOrder} />}
           />;
 
           <Route
@@ -83,6 +87,10 @@ function App() {
 }
 
 export default App;
-//  <Main />
-// <Search />
-/* <Route path="/checkout" component={Checkout} /> */
+
+{/* <Elements stripe={stripePromise}>
+<Route
+  exact path="/checkout"
+  render={() => <Checkout order={order} />}
+/>;
+</Elements> */}

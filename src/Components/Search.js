@@ -36,9 +36,6 @@ const Search = (props) => {
     const changeGenre = e => {
         setGenre(e.target.value)
     }
-    // const bookFilter = e => {
-    //     setItem("");
-    // }
     // useEffect(() => {
     //     // Update the document title using the browser API
     //     order.length = order.length;
@@ -53,15 +50,17 @@ const Search = (props) => {
     // );
     return (
         <div id="searchBox">
-            <Link to='/'>Home</Link><br />
-            <Link to='/checkout'>Shopping Cart</Link><br />
-            <button id="red">{length}</button><br></br>
-            <img src={cart} alt="shopping cart icon" className="icon c" />
+            <div className="sTop">
+                <Link to='/checkout'><button id="red">{length}</button></Link><br></br>
+                <img src={cart} alt="shopping cart icon" className="icon c" />
+            </div>
+            <div className="sTop r"> <Link to='/' className="sLink"> Home </Link><br />
+                <Link to='/checkout' className="sLink" > Checkout </Link>
+            </div>
             <ul id="tiny">
                 {order.map(item => <li>{item.title}</li>)}<br></br>
             </ul>
             Search For Books By...
-            {/* <form onSubmit={props.submitSearch}> */}
             <form onSubmit={props.bookFilter}>
                 <input
                     type="text"
@@ -96,7 +95,7 @@ const Search = (props) => {
             </form>
             <button id="reset" onClick={props.reset}>Reset Search</button><br></br>
             {/* {order.map(item => <p>{JSON.stringify(item)}</p>)} */}
-            {order.length < 1 &&
+            {order.length < 2 &&
                 <img src={ad} id="ad" alt="advertisement"></img>}
         </div >
     );
