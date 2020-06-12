@@ -9,7 +9,8 @@ const Search = (props) => {
     const [item, setItem] = useState("");
     let [genre, setGenre] = useState("Sci-Fi")
     let [order, setOrder] = useState(props.order);
-    let [auth, setAuth] = useState("")
+    let [auth, setAuth] = useState("");
+    let [isbn, setISBN] = useState("");
     function getLength(order) {
         let len = 0
         for (let i = 0; i < order.length; i++) {
@@ -20,6 +21,9 @@ const Search = (props) => {
     let length = getLength(order);
     const changeSearch = (e) => {
         setItem(e.target.value);
+    };
+    const changeISBN = (e) => {
+        setISBN(e.target.value);
     };
     const changeAuth = e => {
         setAuth(e.target.value)
@@ -81,6 +85,10 @@ const Search = (props) => {
                 <input type="submit" className="filters" name="submit" value="Author" />
                 {/* button className="filters" onClick={props.bookFilter}>Author</button> */}
             </form>
+            <form onSubmit={props.isbnFilter}>
+                <input type="text" name="isbn" onChange={changeISBN} value={isbn}></input>
+                <input type="submit" className="filters" name="submit" value="ISBN" />
+            </form>
             <p> Or filter by...</p >
             {/* <form onSubmit={props.bookFilter}> */}
             <form onSubmit={props.genreFilter}>
@@ -95,7 +103,7 @@ const Search = (props) => {
             </form>
             <button id="reset" onClick={props.reset}>Reset Search</button><br></br>
             {/* {order.map(item => <p>{JSON.stringify(item)}</p>)} */}
-            {order.length < 2 &&
+            {order.length < 3 &&
                 <img src={ad} id="ad" alt="advertisement"></img>}
         </div >
     );

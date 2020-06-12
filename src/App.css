@@ -54,8 +54,17 @@
 .link {    
   font-weight: 700;
   color: blue;
+  font-size: 130%;
   margin-top: 0px;
+  animation-name: checkoutLink;
+  animation-duration: 7s;
 }
+
+@keyframes checkoutLink {
+  from {color: lightcyan;}
+  to {color: darkblue;}
+}
+
 .rAll { 
   width: 80px;
   background-color: red;

@@ -47,6 +47,13 @@ const Main = (props) => {
     const input = e.target.auth.value;
     authDisplay(input);
   }
+  const isbnFilter = e => {
+    e.preventDefault();
+    console.log(e.target);
+    console.log(e.target.isbn.value);
+    const input = e.target.isbn.value;
+    isbnDisplay(input);
+  }
   const genreFilter = e => {
     e.preventDefault();
     console.log(e.target);
@@ -67,6 +74,15 @@ const Main = (props) => {
   const authDisplay = input => {
     data.filter((p => {
       if ((p.author).includes(input)) {
+        newData.push(p)
+      }
+      console.log(newData)
+      return setData(newData);
+    }))
+  };
+  const isbnDisplay = input => {
+    data.filter((p => {
+      if ((p.isbn).includes(input)) {
         newData.push(p)
       }
       console.log(newData)
@@ -95,7 +111,8 @@ const Main = (props) => {
   }
   return (
     <div id="main">
-      <Search bookFilter={bookFilter} authFilter={authFilter} genreFilter={genreFilter} order={order} reset={reset} />
+      <Search bookFilter={bookFilter} authFilter={authFilter} genreFilter={genreFilter}
+        order={order} reset={reset} isbnFilter={isbnFilter} />
       {data.map((book, i) => {
         return (
           <div key={i} className="squares">
@@ -105,9 +122,9 @@ const Main = (props) => {
               alt="book cover"
             />
             {book.inventory ?
-              <h3>  <Link to={`/${i}`}>{book.title}</Link>  </h3> :
+              <h3>  <Link to={`/book/${i}`}>{book.title}</Link>  </h3> :
               <h3 style={customStyle}>
-                <Link to={`/${i}`}>{book.title}</Link>
+                <Link to={`/book/${i}`}>{book.title}</Link>
               </h3>}
             <p>
               Author: <em>{book.author}</em>

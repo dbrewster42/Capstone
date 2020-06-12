@@ -55,9 +55,9 @@ const Single = (props) => {
     <div id="single">
       <Search order={order} />
       <div id="info">
-        <h3>Title: {book.title} </h3>
+        <h2>{book.title} </h2>
         <p>
-          Author: <em>{book.author}</em>
+          Author: <span>{book.author}</span>
         </p>
         <p>Genre: {book.category}</p>
         <p>ISBN: {book.isbn}</p>

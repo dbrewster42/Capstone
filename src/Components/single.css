@@ -24,3 +24,7 @@
     color: white;
     padding: 6px;
   }
+span {
+  font-style: italic;
+  font-weight: 500;
+}

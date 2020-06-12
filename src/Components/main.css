@@ -10,11 +10,20 @@
 .sLink {
   color: blue;
   font-weight: 700;
-  margin: 20px 0px 20px 0px;
+  font-size: 130%;
+  margin: 0px 0px 10px 0px;
+  animation-name: linkColor;
+  animation-duration: 7s;
+}
+
+@keyframes linkColor {
+from {color: lightseagreen;}
+to {color: darkblue;}
 }
 .sTop {
   width: 45%;
   display: inline-block;
+  vertical-align: center;
   height: 70px; 
 }
 .r {
@@ -28,7 +37,7 @@
 }
 
 .icon {
-  height: 30px;
+  height: 40px;
 }
 .checkCover {
   width: 200px;
@@ -74,13 +83,13 @@
   width: 50%;
   margin-top: 15px;
 }
-@media screen and (max-width: 950px){
+@media screen and (max-width: 1050px){
   .squares {
     width: 33%;
     height: 400px;
   }
   #searchBox {
-    width: 28%;
+    width: 23%;
     height: 385px;
   }
   input {
