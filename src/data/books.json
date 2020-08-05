@@ -1,0 +1,156 @@
+[
+  {
+    "isbn": "9781593275846",
+    "title": "Harry Potter and the Methods of Rationality",
+    "author": "Eliezer Yudkowsky",
+    "publisher": "No Starch Press",
+    "category": "Fantasy",
+    "price": 19.99,
+    "picture": "mor.jpg",
+    "inventory": 12,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781449334242",
+    "title": "Hitchhikers Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "publisher": "Galatic Encyclopedia",
+    "category": "Sci-Fi",
+    "price": 14.99,
+    "picture": "hitch.jpeg",
+    "inventory": 10,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781779334242",
+    "title": "Carnage and Culture",
+    "author": "Victor Davis Hanson",
+    "publisher": "Penguin",
+    "category": "Horror",
+    "price": 13.99,
+    "picture": "carnage.jpg",
+    "inventory": 8,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781593295846",
+    "title": "The Moon is a Harsh Mistress",
+    "author": "Robert E Heinlein",
+    "publisher": "Adam",
+    "category": "Sci-Fi",
+    "price": 12.99,
+    "picture": "mm.jpg",
+    "inventory": 10,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781449331848",
+    "title": "Game of Thrones",
+    "author": "George RR Martin",
+    "publisher": "Winterfell",
+    "category": "Fantasy",
+    "price": 9.99,
+    "picture": "got.jpg",
+    "inventory": 10,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781449339948",
+    "title": "Foundation",
+    "author": "Isaac Asimov",
+    "publisher": "Galatic Library",
+    "category": "Sci-Fi",
+    "price": 11.99,
+    "picture": "foundation.jpg",
+    "inventory": 10,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781593275846",
+    "title": "Catch-22",
+    "author": "Joseph Heller",
+    "publisher": "Penguins",
+    "category": "Classic",
+    "price": 12.99,
+    "picture": "22.jpg",
+    "inventory": 10,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781449331810",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "publisher": "Penguin",
+    "category": "Sci-Fi",
+    "price": 11.99,
+    "picture": "dune.jpeg",
+    "inventory": 5,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781593275846",
+    "title": "The Catch in the Rye",
+    "author": "JD Salinger",
+    "publisher": "No Starch Press",
+    "category": "Classic",
+    "price": 9.99,
+    "picture": "catcher.jpg",
+    "inventory": 10,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781593271234",
+    "title": "Harry Potter and the Half Blood Prince",
+    "author": "JK Rowling",
+    "publisher": "No Starch Press",
+    "category": "Fantasy",
+    "price": 9.99,
+    "picture": "hp.jpg",
+    "inventory": 5,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781449339333",
+    "title": "I, Robot",
+    "author": "Isaac Asimov",
+    "publisher": "Galatic Library",
+    "category": "Sci-Fi",
+    "price": 9.99,
+    "picture": "robot.jpg",
+    "inventory": 7,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781449331228",
+    "title": "Goosebumps",
+    "author": "RL Stein",
+    "publisher": "Halloween",
+    "category": "Horror",
+    "price": 7.99,
+    "picture": "gb.jpg",
+    "inventory": 10,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781449331899",
+    "title": "The Great Gasby",
+    "author": "Scott Fitzgerald",
+    "publisher": "Books R Us",
+    "category": "Classic",
+    "price": 6.99,
+    "picture": "images.jpg",
+    "inventory": 5,
+    "quantity": 0
+  },
+  {
+    "isbn": "9781449331844",
+    "title": "1984",
+    "author": "George Orwell",
+    "publisher": "Penguin",
+    "category": "Classic",
+    "price": 4.99,
+    "picture": "1984.jpg",
+    "inventory": 1,
+    "quantity": 0
+  }
+]
