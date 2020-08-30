@@ -13,16 +13,13 @@ import Single from "./Components/Single";
 import Checkout from "./Components/Checkout";
 import NotFound from "./Components/NotFound"
 
-// const stripePromise = 'pk_test_JJ1eMdKN0Hp4UFJ6kWXWO4ix00jtXzq5XG';
+
 function App() {
-  const [newData, setNewData] = useState(data)
-  // console.log(data)
+  const [newData, setNewData] = useState(data) 
   const [order, setOrder] = useState([]);
-  // const [id, setID] = useState(-1)
-  // let [newBook, setNewBook] = useState({})
+ 
   let [book] = useState({})
-  const reduceInventory = (book, quant) => {
-    console.log("Hey FOlks")
+  const reduceInventory = (book, quant) => {    
     for (let i = 0; i < order.length; i++) {
       if (order[i] == book) {
         console.log(i)
@@ -109,10 +106,3 @@ function App() {
 }
 
 export default App;
-
-{/* <Elements stripe={stripePromise}>
-<Route
-  exact path="/checkout"
-  render={() => <Checkout order={order} />}
-/>;
-</Elements> */}

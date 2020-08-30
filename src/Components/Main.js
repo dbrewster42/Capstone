@@ -17,19 +17,13 @@ function importAll(r) {
   return images;
 }
 
-const Main = (props) => {
-  //   let [toggle, setToggle] = useState(false);
-  // console.log(props)
-  // const [data, setData] = useState(props.data);
+const Main = (props) => {  
   let [data, setData] = useState(props.data)
-  const images = importAll(require.context("../images", false, /\.(jpe?g)$/));
-  // console.log(images);
-  let order = props.order
-  // setData(props.newData)
+  const [totalData] = useState(data);
+  const images = importAll(require.context("../images", false, /\.(jpe?g)$/));  
+  let order = props.order  
   console.log(data)
   const newData = []
-  // const id = props.id
-
 
   const bookFilter = e => {
     e.preventDefault();
@@ -104,7 +98,7 @@ const Main = (props) => {
     }))
   };
   const reset = () => {
-    window.location.href = "/";
+    setData(totalData);
   }
   const customStyle = {
     textDecoration: "line-through"

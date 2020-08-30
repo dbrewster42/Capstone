@@ -11,6 +11,7 @@ const Search = (props) => {
     let [order, setOrder] = useState(props.order);
     let [auth, setAuth] = useState("");
     let [isbn, setISBN] = useState("");
+
     function getLength(order) {
         let len = 0
         for (let i = 0; i < order.length; i++) {
@@ -18,6 +19,7 @@ const Search = (props) => {
         }
         return len
     };
+
     let length = getLength(order);
     const changeSearch = (e) => {
         setItem(e.target.value);
@@ -28,18 +30,25 @@ const Search = (props) => {
     const changeAuth = e => {
         setAuth(e.target.value)
     }
-    //[e.target.name] instead of text
-    // const submitSearch = (e) => {
-    //     e.preventDefault();
-    // };
+    
     useEffect(() => {
         console.log(order)
-        setOrder(order)
-        // order.length = order.length;
+        setOrder(order)        
     }, [order]);
+
     const changeGenre = e => {
         setGenre(e.target.value)
     }
+
+    const titleSubmit = e => {   
+        setItem("");     
+        props.bookFilter(e);       
+    }
+    const authSubmit = e => {
+        setAuth("");
+        props.authFilter(e);
+    }
+
     // useEffect(() => {
     //     // Update the document title using the browser API
     //     order.length = order.length;
@@ -64,8 +73,8 @@ const Search = (props) => {
             <ul id="tiny">
                 {order.map(item => <li>{item.title}</li>)}<br></br>
             </ul>
-            Search For Books By...
-            <form onSubmit={props.bookFilter}>
+            Search For Books By...            
+            <form onSubmit={titleSubmit}>
                 <input
                     type="text"
                     name="item"
@@ -73,33 +82,26 @@ const Search = (props) => {
                     value={item}
                 ></input>
                 <input type="submit" className="filters" name="submit" value="Title" />
-
-                {/* <button className="filters">Title</button> */}
-                {/* {<button>
-                    <img src={search} alt="search button" className="icon" />
-                </button> */}
+              
             </form>
-            <form onSubmit={props.authFilter}>
-                <input type="text" name="auth" onChange={changeAuth} value={auth}></input>
-                {/* <button className="filters" name="submit">Author</button> */}
+            <form onSubmit={authSubmit}>            
+                <input type="text" name="auth" onChange={changeAuth} value={auth}></input>              
                 <input type="submit" className="filters" name="submit" value="Author" />
-                {/* button className="filters" onClick={props.bookFilter}>Author</button> */}
+               
             </form>
             <form onSubmit={props.isbnFilter}>
                 <input type="text" name="isbn" onChange={changeISBN} value={isbn}></input>
                 <input type="submit" className="filters" name="submit" value="ISBN" />
             </form>
-            <p> Or filter by...</p >
-            {/* <form onSubmit={props.bookFilter}> */}
-            <form onSubmit={props.genreFilter}>
-                <button className="filters">Genre</button>
-                {/* <button className="filters" onClick={props.bookFilter}>Genre</button> */}
+            <p> Or filter by...</p >           
+            <form onSubmit={props.genreFilter}>                            
                 <select name="genre" value={genre} onChange={changeGenre}>
                     <option value="Sci-Fi">Sci-Fi</option>
                     <option value="Fantasy">Fantasy</option>
                     <option value="Classic">Classic</option>
                     <option value="Horror">Horror</option>
                 </select>
+                <button className="filters">Genre</button>   
             </form>
             <button id="reset" onClick={props.reset}>Reset Search</button><br></br>
             {/* {order.map(item => <p>{JSON.stringify(item)}</p>)} */}
